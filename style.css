@@ -1,0 +1,149 @@
+/* to reset the default spacing in the browser */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global */
+
+body {
+    font-family: "Merriweather", sans-serif;
+    background-color: #ebf2ff;
+}
+
+/* here for the sake of reusability nav__item properties are 
+copied to button_primary*/
+
+.button__primary {
+    /* gradient color */
+    background-image: linear-gradient( to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+    /* applying the whole color of button to white */
+    color: #fff;
+    /* padding will increase the size of the button */
+    /* beacause it applies inside the border */
+    padding: 12px;
+    /* removing the border */
+    border: none;
+    /* rounding the button edges */
+    border-radius: 6px;
+}
+
+.container {
+    /* image will take all the width */
+    width: 100%;
+    /* margin 0 for top and botton */
+    /* margin auto for left and right, here browser will decide the margin */
+    margin: 0 auto;
+    /* adding space to the left and right side of the image */
+    padding: 0 15px;
+}
+
+.navbar {
+    /* adding flex and space around the logo and button  */
+    display: flex;
+    justify-content: space-around;
+    /* aligning logo and button to center */
+    align-items: center;
+}
+
+/* always deal with parent element first before children */
+
+.navbar__brand {
+    width: 100px;
+}
+
+.navbar__logo {
+    width: 100%;
+    /*  */
+    overflow-x: hidden;
+}
+
+/* always deal with parent element first before children */
+
+/* .nav__item { */
+
+/* gradient color */
+
+/* background-image: linear-gradient( to right, #ff512f 0%, #dd2476 51%, #ff512f 100%); */
+
+/* applying the whole color of button to white */
+
+/* color: #fff; */
+
+/* padding will increase the size of the button */
+
+/* beacause it applies inside the border */
+
+/* padding: 12px; */
+
+/* removing the border */
+
+/* border: none; */
+
+/* rounding the button edges */
+
+/* border-radius: 6px;
+} */
+
+.hero__container {
+    width: 100%;
+}
+
+/* here before, image was taking the space according to its size */
+
+/* but here since hero__imahe is in the hero__image__container */
+
+/* it will take only space that its parent has */
+
+.hero__image__container {
+    width: 100%;
+}
+
+.hero__image {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        /* adding flex and space between the logo and button  */
+        justify-content: space-between;
+        /* adding space inside */
+        padding: 10px 20px;
+    }
+    /* increasing the size of the logo thourgh its parent class */
+    .navbar__brand {
+        width: 150px;
+    }
+    /*  */
+    /* .navbar__item { */
+    .button__primary {
+        /* increasinng the size of the button through padding */
+        padding: 20px;
+        font-size: 20px;
+    }
+    /* adding flex */
+    .hero__container {
+        display: flex;
+        /* the image and text will be setup in reverse order */
+        flex-direction: row-reverse;
+        /* the text will show on center */
+        align-items: center;
+        justify-content: space-between;
+        gap:10px;
+    }
+}
+
+@media (min-width: 1020px) {
+    .container {
+        max-width: 1010px;        
+    }
+    /* adjusting the size of image */
+    .hero__image__container {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (min-width: 1400px) {}
