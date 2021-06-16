@@ -94,15 +94,59 @@ copied to button_primary*/
     width: 100%;
 }
 
+/* increasing the font size */
+.hero__text {
+    font-size: 30px;
+    color: #1d3557;
+    /* adding the outer spacing */
+    margin: 20px 0;
+}
+
+/* Menu styles */
+.explore__menu__container {
+    /* adding space to the top */
+    margin-top: 50px;
+}
+
+.explore__menu__text {
+    font-size: 30px;
+    color: #1d3557;
+    /* adding the outer spacing */
+    margin: 20px 0;
+    /* centering the text */
+    text-align: center;
+}
+
 /* here due to mobile first approach*/
 /* we are settign the card to take the whole screen width */
 .food__menu__card {
     width: 100%;
+    /* applying white background to give a card look */
+    background-color: #fff;
+    border-radius: 8px;
+    /* adding spaces between cards */
+    margin-bottom: 15px;
 }
 
 /* we are setting the image to take the whole screen width */
 .food__image {
     width: 100%;
+    /* here image is round from all edges */
+    /* but we only need it on upper side */
+    /* so we will explicitly define the edge which we wanted to be rounded */
+    /* border-radius: 8px; */
+    border-radius: 8px 8px 0 0;
+}
+
+.food__menu__card__description {
+    /* adjusting space for description */
+    padding: 20px;
+}
+
+.explore__menu__view__more{
+    display: flex;
+    /* aligning button to the center */
+    justify-content: center;
 }
 
 /* tablet devices */
