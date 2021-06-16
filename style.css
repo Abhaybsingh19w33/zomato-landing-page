@@ -1,21 +1,20 @@
 /* to reset the default spacing in the browser */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* To Box Model */
 }
 
 /* Global */
-
 body {
     font-family: "Merriweather", sans-serif;
     background-color: #ebf2ff;
+    overflow-x: hidden;
 }
 
 /* here for the sake of reusability nav__item properties are 
 copied to button_primary*/
-
 .button__primary {
     /* gradient color */
     background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
@@ -29,7 +28,7 @@ copied to button_primary*/
     /* rounding the button edges */
     border-radius: 6px;
     /* when hover on mouse it will change the mouse icon to a pointer */
-    cursor: pointer
+    cursor: pointer;
 }
 
 .container {
@@ -51,7 +50,6 @@ copied to button_primary*/
 }
 
 /* always deal with parent element first before children */
-
 .navbar__brand {
     width: 100px;
 }
@@ -59,7 +57,7 @@ copied to button_primary*/
 .navbar__logo {
     width: 100%;
     /*  */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 /* always deal with parent element first before children */
@@ -77,7 +75,6 @@ copied to button_primary*/
 /* rounding the button edges */
 /* border-radius: 6px;
 } */
-
 .hero__container {
     width: 100%;
 }
@@ -85,7 +82,6 @@ copied to button_primary*/
 /* here before, image was taking the space according to its size */
 /* but here since hero__imahe is in the hero__image__container */
 /* it will take only space that its parent has */
-
 .hero__image__container {
     width: 100%;
 }
@@ -102,7 +98,8 @@ copied to button_primary*/
     margin: 20px 0;
 }
 
-/* Menu styles */
+/* Menu Styles */
+
 .explore__menu__container {
     /* adding space to the top */
     margin-top: 50px;
@@ -149,6 +146,53 @@ copied to button_primary*/
     justify-content: center;
 }
 
+/* Flex */
+/* adjusting and adding spaces for description */
+.restaurants__description {
+    font-size: 30px;
+    color: #1d3557;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.restaurants__flex__row__one,
+.restaurants__flex__row__two {
+    /* adding flex and spacing */
+    width: 100%;
+    display: flex;
+    gap: 4px;
+}
+
+.restaurants__flex__row__one {
+    /* aligninng the items to baseline */
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+
+.restaurant__1__image,
+.restaurant__2__image,
+.restaurant__3__image,
+.restaurant__4__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.restaurant__1,
+.restaurant__4 {
+    /* adjusting width and height */
+    width: 100%;
+    height: 150px;
+}
+
+.restaurant__2,
+.restaurant__3 {
+    /* adjusting width and height */
+    /* here we giving images more width  */
+    width: 120%;
+    height: 200px;
+}
+
 /* tablet devices */
 @media (min-width: 768px) {
     .navbar {
@@ -166,7 +210,7 @@ copied to button_primary*/
     /*  */
     /* .navbar__item { */
     .button__primary {
-        /* increasinng the size of the button through padding */
+        /* increasing the size of the button through padding */
         /* adjusting the height and width of button */
         padding: 12px 20px;
         font-size: 20px;
@@ -198,12 +242,11 @@ copied to button_primary*/
         top: 0;
         height: 100%;
         width: 100%;
-
         background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
         /* placing the bg below the cards */
         z-index: -3;
         /* transforming the rectangle to rohmbus*/
-        transform: skewY(-5deg)
+        transform: skewY(-5deg);
     }
 
     .explore__menu__lists {
@@ -220,13 +263,28 @@ copied to button_primary*/
         /* raising the card from bottom */
         margin-bottom: 30px;
     }
+
+    .restaurants__description {
+        /* increasing the font size of the description*/
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .restaurants__container {
+        display: flex;
+        align-items: center;
+    }
+
+    .restaurants__flex {
+        width: 100%;
+    }
 }
 
 @media (min-width: 1020px) {
 
     /* setting container max-width */
     .container {
-        max-width: 1010px;
+        max-width: 900px;
     }
 
     /* removing this adjusted the image percfetly fine */
@@ -238,7 +296,6 @@ copied to button_primary*/
         width: 500px;
         height: 500px;
     } */
-
     .hero__text {
         /* adjusting the font size */
         font-size: 50px;
@@ -258,6 +315,10 @@ copied to button_primary*/
         /* increasing the font size*/
         font-size: 50px;
     }
+
+    .restaurants__container {
+        margin-top: 30px;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -269,5 +330,4 @@ copied to button_primary*/
 
     /* here text is taking half of the screen width */
     /* and image is taking another half of the screen width*/
-
 }
