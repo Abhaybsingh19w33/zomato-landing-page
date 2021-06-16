@@ -143,7 +143,7 @@ copied to button_primary*/
     padding: 20px;
 }
 
-.explore__menu__view__more{
+.explore__menu__view__more {
     display: flex;
     /* aligning button to the center */
     justify-content: center;
@@ -183,12 +183,42 @@ copied to button_primary*/
         gap: 10px;
     }
 
-    /* increasing the font size */
-    .hero__text {
-        font-size: 30px;
-        color: #1d3557;
-        /* adding the outer spacing */
-        margin: 20px 0;
+    /* for adding the rohmbus bg wee need to set parent position to relative */
+    .explore__menu__container {
+        position: relative;
+    }
+
+    .explore__menu__gradient__bg {
+        /* now setting the child to absolute position*/
+        position: absolute;
+        /* since we added position attribute */
+        /* the height and width might misbehave  */
+        /* so we need to explicitly set the values */
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+
+        background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+        /* placing the bg below the cards */
+        z-index: -3;
+        /* transforming the rectangle to rohmbus*/
+        transform: skewY(-5deg)
+    }
+
+    .explore__menu__lists {
+        /* aligning cards in row and adding gaps between them*/
+        display: flex;
+        gap: 8px;
+        /* adding space between the text and cards */
+        margin-top: 50px;
+    }
+
+    #pizza__card {
+        /* making the card look like pop up*/
+        margin-top: -20px;
+        /* raising the card from bottom */
+        margin-bottom: 30px;
     }
 }
 
@@ -214,6 +244,20 @@ copied to button_primary*/
         font-size: 50px;
     }
 
+    .explore__menu__lists {
+        /* aligning cards in row and adding gaps between them*/
+        /* display: flex; */
+        gap: 20px;
+        /* increasing the size left and right */
+        padding: 0 20px;
+        /* adding space between the text and cards */
+        /* margin-top: 50px; */
+    }
+
+    .explore__menu__text {
+        /* increasing the font size*/
+        font-size: 50px;
+    }
 }
 
 @media (min-width: 1400px) {
