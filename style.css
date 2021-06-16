@@ -18,7 +18,7 @@ copied to button_primary*/
 
 .button__primary {
     /* gradient color */
-    background-image: linear-gradient( to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+    background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
     /* applying the whole color of button to white */
     color: #fff;
     /* padding will increase the size of the button */
@@ -28,6 +28,8 @@ copied to button_primary*/
     border: none;
     /* rounding the button edges */
     border-radius: 6px;
+    /* when hover on mouse it will change the mouse icon to a pointer */
+    cursor: pointer
 }
 
 .container {
@@ -63,27 +65,16 @@ copied to button_primary*/
 /* always deal with parent element first before children */
 
 /* .nav__item { */
-
 /* gradient color */
-
 /* background-image: linear-gradient( to right, #ff512f 0%, #dd2476 51%, #ff512f 100%); */
-
 /* applying the whole color of button to white */
-
 /* color: #fff; */
-
 /* padding will increase the size of the button */
-
 /* beacause it applies inside the border */
-
 /* padding: 12px; */
-
 /* removing the border */
-
 /* border: none; */
-
 /* rounding the button edges */
-
 /* border-radius: 6px;
 } */
 
@@ -92,9 +83,7 @@ copied to button_primary*/
 }
 
 /* here before, image was taking the space according to its size */
-
 /* but here since hero__imahe is in the hero__image__container */
-
 /* it will take only space that its parent has */
 
 .hero__image__container {
@@ -105,6 +94,18 @@ copied to button_primary*/
     width: 100%;
 }
 
+/* here due to mobile first approach*/
+/* we are settign the card to take the whole screen width */
+.food__menu__card {
+    width: 100%;
+}
+
+/* we are setting the image to take the whole screen width */
+.food__image {
+    width: 100%;
+}
+
+/* tablet devices */
 @media (min-width: 768px) {
     .navbar {
         /* adding flex and space between the logo and button  */
@@ -112,17 +113,21 @@ copied to button_primary*/
         /* adding space inside */
         padding: 10px 20px;
     }
+
     /* increasing the size of the logo thourgh its parent class */
     .navbar__brand {
         width: 150px;
     }
+
     /*  */
     /* .navbar__item { */
     .button__primary {
         /* increasinng the size of the button through padding */
-        padding: 20px;
+        /* adjusting the height and width of button */
+        padding: 12px 20px;
         font-size: 20px;
     }
+
     /* adding flex */
     .hero__container {
         display: flex;
@@ -131,19 +136,50 @@ copied to button_primary*/
         /* the text will show on center */
         align-items: center;
         justify-content: space-between;
-        gap:10px;
+        gap: 10px;
+    }
+
+    /* increasing the font size */
+    .hero__text {
+        font-size: 30px;
+        color: #1d3557;
+        /* adding the outer spacing */
+        margin: 20px 0;
     }
 }
 
 @media (min-width: 1020px) {
+
+    /* setting container max-width */
     .container {
-        max-width: 1010px;        
+        max-width: 1010px;
     }
+
+    /* removing this adjusted the image percfetly fine */
+    /* when we used flex in general it divided the whote scrren for text and image */
+    /* but we set the height and width explicitly to 500px this made the mess */
+    /* after removing this, image took the 100% width of its parent */
     /* adjusting the size of image */
-    .hero__image__container {
+    /* .hero__image__container {
         width: 500px;
         height: 500px;
+    } */
+
+    .hero__text {
+        /* adjusting the font size */
+        font-size: 50px;
     }
+
 }
 
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+
+    /* setting container max-width */
+    .container {
+        max-width: 1250px;
+    }
+
+    /* here text is taking half of the screen width */
+    /* and image is taking another half of the screen width*/
+
+}
